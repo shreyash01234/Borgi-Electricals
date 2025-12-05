@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borgi Electricals Industries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Borgi Electricals Industries</h1>
+        <p>India’s Trusted Electrical Manufacturing Company</p>
+    </header>
+
+    <main>
+        <div class="home-buttons">
+            <button onclick="showCustomerStore()">Customer Store</button>
+            <button onclick="showEmployeeLogin()">Employee Login</button>
+        </div>
+
+        <div id="customer-store" class="hidden">
+            <h2>Customer Store</h2>
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+            <div id="product-list"></div>
+            <h3>Shopping Cart</h3>
+            <div id="cart-list"></div>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+
+        <div id="employee-login" class="hidden">
+            <h2>Employee Login</h2>
+            <input type="email" id="empEmail" placeholder="Email">
+            <input type="text" id="empID" placeholder="Employee ID">
+            <input type="password" id="empPassword" placeholder="Password">
+            <button onclick="employeeLogin()">Login</button>
+        </div>
+
+        <div id="employee-dashboard" class="hidden">
+            <h2>Employee Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+            <h3>Add Product</h3>
+            <input type="text" id="prodName" placeholder="Product Name">
+            <input type="text" id="prodCategory" placeholder="Category (Bulb, Wire, etc.)">
+            <input type="text" id="prodFeatures" placeholder="Features">
+            <input type="number" id="prodPrice" placeholder="Price">
+            <input type="file" id="prodImage" accept="image/*,video/*">
+            <button onclick="addProduct()">Add Product</button>
+            <h3>All Products</h3>
+            <div id="dashboard-products"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
